@@ -106,7 +106,6 @@ def processed(data,label_name: str,threshold: int=0.01, corr_threshold=1):
     label=data[label_name]
     data=data.drop(label_name,axis=1)
     data=pd.concat([label,data],axis=1)
-
     data.astype(str)
     df=data.dropna()
     label_encoder = LabelEncoder()
